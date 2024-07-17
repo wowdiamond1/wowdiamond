@@ -27,7 +27,7 @@ i<!DOCTYPE html>
 /* sc-component-id: sc-1ly7lpo-1 */
 .jHCZrL{position:absolute;visibility:hidden;width:0;height:0;top:-0px;left:50%;}
 /* sc-component-id: sc-ewl9y2-0 */
-.klOQRe{width:95%;max-width:1400px;margin:0 auto;box-sizing:border-box;} @media only screen and (max-width:1440px){.klOQRe{width:90%;max-width:1200px;}} @media only screen and (max-width:1024px){.klOQRe{width:100%;padding-right:40px;padding-left:40px;}} @media only screen and (max-width:457px){.klOQRe{padding-right:20px;padding-left:20px;}}
+.klOQRe{width:95%;max-width:1400px;margin:0 auto;box-sizing:border-box; } @media only screen and (max-width:1440px){.klOQRe{width:90%;max-width:1500px; }} @media only screen and (max-width:1024px){.klOQRe{width:100%;padding-right:40px;padding-left:40px; }} @media only screen and (max-width:457px){.klOQRe{padding-right:20px;padding-left:20px;}}
 /* sc-component-id: sc-zyxusa-0 */
 .PXsbt{word-break:break-word;padding:80px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;overflow:hidden;} @media only screen and (max-width:457px){.PXsbt{padding:60px 0;}}
 /* sc-component-id: sc-et7lxk-0 */
@@ -149,7 +149,7 @@ i<!DOCTYPE html>
 /* sc-component-id: sc-1tk3fej-0 */
 .ifBLOY{background:rgba(246,240,255,1);padding-top:155px;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;position:relative;overflow:hidden;} @media only screen and (max-width:768px){.ifBLOY{padding-top:130px;}} @media only screen and (max-width:650px){.ifBLOY{padding-top:95px;}} .ifBLOY .left-triangle{position:absolute;left:0;bottom:0;z-index:1;} @media only screen and (max-width:600px){.ifBLOY .left-triangle{bottom:-250px;}} .ifBLOY .right-triangle{position:absolute;right:0;bottom:0;} @media only screen and (max-width:600px){.ifBLOY .right-triangle{bottom:-100px;}} .ifBLOY .add-button-wrap{margin:10px;} .ifBLOY .add-button-wrap + .avatarImage{margin-top:0;} .ifBLOY .avatarImage{color:red;margin-top:-75px;} @media only screen and (max-width:768px){.ifBLOY .avatarImage{margin-top:-50px;}} @media only screen and (max-width:650px){.ifBLOY .avatarImage{margin-top:-35px;}}
 /* sc-component-id: sc-1tk3fej-1 */
-.hISuas{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;z-index:2;margin-top:40px;} @media only screen and (max-width:768px){.hISuas{padding-top:0px;}} .hISuas:nth-child(1){margin-top:0px;} .hISuas .control-container{margin-bottom:30px;width:100%;} .hISuas .control-container h1{margin-bottom:0;} .hISuas .control-container p{padding-top:0;}
+.hISuas{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;z-index:2;margin-top:40px; } @media only screen and (max-width:768px){.hISuas{padding-top:0px;}} .hISuas:nth-child(1){margin-top:0px;} .hISuas .control-container{margin-bottom:30px;width:100%;} .hISuas .control-container h1{margin-bottom:0;} .hISuas .control-container p{padding-top:0;}
 /* sc-component-id: sc-1tk3fej-3 */
 .lzaUc{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;margin-bottom:50px;width:100%;} @media only screen and (max-width:768px){.lzaUc{margin-bottom:40px;}} .lzaUc >:last-child{margin-bottom:0;}
 /* sc-component-id: sc-1tk3fej-4 */
@@ -367,18 +367,27 @@ text-transform: initial;
     font-size: 30px;
   }
 }
-
-/* menu-icon */
-.menu-icon {
-  display: none; /* Hidden by default */
+/* container */
+.container{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-@media only screen and (max-width: 820px) { /* Change to a larger max-width */
-  .menu-icon {
-    display: block; /* Show the menu icon on mobile */
-    margin-left: 10px; /* Optional margin */
+.container img {
+    height: 600px;
+    width: 2000px; /* Ensures aspect ratio is maintained */
+}
+
+@media only screen and (max-width: 820px) {
+  .container img {
+    margin-top: 10px;
+    height: 500px;
+    width: 600px; /* Ensures aspect ratio is maintained */
   }
 }
+
 
 
 
@@ -561,42 +570,43 @@ text-transform: initial;
   from {opacity: .4}
   to {opacity: 1}
 }
+
 .marquee {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-  border: 1px solid rgba(0, 0, 0, .15);
-  background-color: #f7f1f1;
-  overflow: hidden;
-  position: relative;
-  height: 60px; /* Adjusted height to fit the text */
-  width: 100%;
-  display: flex;
-  align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+    color: #fff;
+    background-color: rgb(242, 240, 235);
+    height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .marquee-inner {
-  display: flex;
-  animation: scroll-left 20s linear infinite;
-  white-space: nowrap;
+    display: flex;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
 }
 
 .marquee-text {
-  display: inline-block;
-  margin-right: 30px; /* Adjust the gap between each instance */
-  color: #8124a9;
-  font-weight: bold;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  line-height: 60px; /* Ensure the text is vertically centered */
+    white-space: nowrap;
+    padding-right: 100px;
+    display: inline-block;
+    margin-right: 30px; /* Adjust the gap between each instance */
+    color: #8124a9;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 60px; /* Ensure the text is vertically centered */
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
-
         
 .iIANbk:before,.iIANbk:after{-webkit-background-clip:initial;-webkit-text-fill-color:initial;background:initial;} .iIANbk > span{display:block;box-sizing:border-box;padding-right:5px;padding-left:5px;} .iIANbk .link-wrapper{position:initial;} .iIANbk u{background:transparent;-webkit-text-decoration:none !important;text-decoration:none !important;}.jiQAAN{color:#221D27;margin-right:20px;width:100%;text-align:left;} @media only screen and (max-width:1024px){.jiQAAN{margin-bottom:0;margin-right:0;padding-right:70px;padding-left:70px;box-sizing:border-box;}} @media only screen and (max-width:1024px){.jiQAAN{padding-right:25px;padding-left:25px;}}.gzBAGO{color:#221D27;padding-top:20px;text-align:left;width:100%;} .gzBAGO:after{z-index:9;} @media only screen and (max-width:1024px){.gzBAGO{margin-bottom:0;margin-right:0;padding-right:70px;padding-left:70px;box-sizing:border-box;}} @media only screen and (max-width:1024px){.gzBAGO{padding-right:25px;padding-left:25px;}}.oKKcg{width:100%;color:#630AE5;margin-bottom:20px;text-align:center;}.guDlNs{width:100%;color:#221D27;text-align:center;}</style>
  
@@ -645,7 +655,7 @@ text-transform: initial;
 
 <nav class="porjectLinksDesktop sc-1akbv98-2 bxeGYB">
   <div class="sc-1akbv98-3 hADSAh">
-    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    
     <div class="sc-1akbv98-4 gUKUXM my-container navbarLink">
       <div class="sc-1akbv98-11 undefined sm-word-wrap sc-15za8y8-0 klRlEw">Home</div>
       <div class="sc-1akbv98-11 undefined sm-word-wrap sc-15za8y8-0 klRlEw">
@@ -670,13 +680,13 @@ text-transform: initial;
                                       <p class="sc-6j6fhe-7 WM_GLOBAL_paragraph18 sm-word-wrap sc-15za8y8-0 joOXl">Shine bright with WOW Diamond!</p>
                                       <p class="sc-6j6fhe-8 WM_GLOBAL_paragraph18 sm-word-wrap sc-15za8y8-0 binbbK">One Stop&nbsp; Solution for your Influencer Marketing needs</p>
                                     </div></div></div>
-                                    <div style="text-align: center; position: relative;">
+                                    <!-- <div style="text-align: center; position: relative;">
                                       <img 
                                         height="40px"
                                         src="https://www.shareicon.net/download/2015/10/03/111449_bottom_512x512.png" 
                                         alt="Chevron Icon" 
                                         style="z-index: 10; position: relative;">
-                                    </div>                                                                   
+                                    </div>                                                                    -->
                                     <div role="button" class="sc-6j6fhe-9 kxoGdP">
                                     </div></div></div></header>
                                     <section>
@@ -708,9 +718,7 @@ text-transform: initial;
                                                             <p class="marquee-text">DIGITAL DREAMS, REAL RESULTS <span class="fa fa-star checked"></span></p>
                                                             <p class="marquee-text">DIGITAL DREAMS, REAL RESULTS <span class="fa fa-star checked"></span></p>
                                                             <p class="marquee-text">DIGITAL DREAMS, REAL RESULTS <span class="fa fa-star checked"></span></p>
-                                                            <p class="marquee-text">DIGITAL DREAMS, REAL RESULTS <span class="fa fa-star checked"></span></p>
-                                                            <p class="marquee-text">DIGITAL DREAMS, REAL RESULTS <span class="fa fa-star checked"></span></p>
-                                                            <p class="marquee-text">DIGITAL DREAMS, REAL RESULTS <span class="fa fa-star checked"></span></p>
+                                                            
                                                         </div>
                                                     </div>
 
@@ -727,10 +735,11 @@ text-transform: initial;
                                                             <div class="sc-1m2h303-2 ibcGfP">
                                                               <h1 class="sc-1m2h303-3 WM_GLOBAL_heading42 sm-word-wrap sc-15za8y8-0 dNEOUJ">ABOUT WOW DIAMOND - OUR MISSION</h1>
                                                               <div>
-                                                                <img  
-                                                                 height="100%";
-                                                                 width="100%"
-                                                                src="https://media.licdn.com/dms/image/D4D12AQGxgHiadP2qtA/article-cover_image-shrink_720_1280/0/1659504993778?e=2147483647&v=beta&t=gZkny586IGtYnobBcxVPQJonh3elO57omXGH1Yqdvwo">  </div> 
+                                                                <div class="container">
+                                                                  <img  
+                                                                      height="400px"
+                                                                      src="https://media.licdn.com/dms/image/D4D12AQGxgHiadP2qtA/article-cover_image-shrink_720_1280/0/1659504993778?e=2147483647&v=beta&t=gZkny586IGtYnobBcxVPQJonh3elO57omXGH1Yqdvwo">
+                                                              </div>
                                                               <div class="sc-1m2h303-5 fhnHcz">
                                                                 <div class="LazyLoad"></div></div><div class="sc-1m2h303-6 gsXISf"><p class="sc-1m2h303-4 WM_GLOBAL_paragraph18 sm-word-wrap sc-15za8y8-0 fRHQMV">We are a leading influencer marketing agency established in 2021. With over 200,000 influencers across various platforms Such as Instagram, LinkedIn, and YouTube, we have collaborated with renowned brands to create impactful marketing campaigns. Our dynamic and growing team is dedicated to connecting influencers with brands to drive Successful marketing Strategies</p><p class="sc-1m2h303-4 WM_GLOBAL_paragraph18 sm-word-wrap sc-15za8y8-0 fRHQMV">At Wow Diamond, our mission is to bridge the gap between brands and influencers, creating impactful and authentic marketing campaigns. We aim to empower brands with innovative strategies that leverage the power of influencer marketing to connect with their target audiences. Our commitment is to deliver measurable results, fostering genuine relationships that drive engagement and growth.
                                                                   <BR><BR>We believe in the transformative power of collaboration, and our extensive network of over 200,000 influencers allows us to tailor campaigns that resonate. With a focus on creativity, transparency, and performance, we strive to set new standards in the influencer marketing industry.</p></div></div></div></div></div></section>
@@ -784,17 +793,18 @@ text-transform: initial;
                                                                                                     </div>
                                                                                                       
      
-                                                                                                      <div class="target-image" style="display: flex; justify-content: center; align-items: center; margin-top: 50px;">
-                                                                                                        <img  
-                                                                                                        height="10%"
-                                                                                                        width="10%"
-                                                                                                          src="https://img.freepik.com/free-vector/red-dart-arrow-hitting-target-center-dartboard_91128-1576.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1721001600&semt=sph" 
-                                                                                                          alt="target">
-                                                                                                      </div>
+                                                                                                     
                                             
                                                                  
                                                                                                       <div class="sc-1tk3fej-1 hISuas sc-ewl9y2-0 klOQRe">
                                                                                                         <div class="sc-1tk3fej-3 lzaUc">
+                                                                                                          <div class="target-image" style="display: flex; justify-content: center; align-items: center; margin-top: 50px;">
+                                                                                                            <img  
+                                                                                                            height="40%"
+                                                                                                            width="40%"
+                                                                                                              src="https://img.freepik.com/free-vector/red-dart-arrow-hitting-target-center-dartboard_91128-1576.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1721001600&semt=sph" 
+                                                                                                              alt="target">
+                                                                                                          </div>
                                                                                                           <h1 data-text="How do we do it?" class="sc-1tk3fej-2 WM_GLOBAL_heading sm-word-wrap sc-15za8y8-0 fOnluN">HOW DO WE DO IT?
 </h1></div>
 <div class="sc-1tk3fej-4 fWiDwS">
@@ -818,7 +828,7 @@ text-transform: initial;
           <div class="sc-1ycdx8o-2 cIagXp">
   <div class="sc-1ycdx8o-3 hDsOhP">
     <div class="sc-1ycdx8o-7 WM_GLOBAL_heading sm-word-wrap sc-15za8y8-0 ePCFDU">WITH WHOM DO WE WORK</div>
-    <div class="logo-section collage1">
+    <!-- <div class="logo-section collage1">
       <div class="logo">
         <img src="https://as1.ftcdn.net/v2/jpg/03/08/09/42/1000_F_308094252_m5jeU3dWxJkbAu4j2QfqPvkpDVW4j9qL.jpg" alt="wow" style="width:100%">
       </div>
@@ -831,10 +841,10 @@ text-transform: initial;
       <div class="logo">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxmxPltrjseAtj_c6odSYhSGDnORLbJCNm1w&s" alt="wow" style="width:100%">
       </div>
-      </div>  
+      </div>   -->
 </div>
 <div class="logo2-section collage2">
-  <div class="logo2">
+  <!-- <div class="logo2">
     <img src="https://d8it4huxumps7.cloudfront.net/bites/wp-content/uploads/2019/07/17072142/How-an-internship-at-Drools-Pet-Food-Division-made-me-familiar-with-the-marketing-world.jpg" alt="wow" style="width:100%">
   </div>
   <div class="logo2">
@@ -845,7 +855,7 @@ text-transform: initial;
   </div>
   <div class="logo2">
     <img src="https://seekvectorlogo.com/wp-content/uploads/2018/01/wadia-digital-vector-logo-small.png" alt="wow" style="width:100%">
-  </div>
+  </div> -->
   </div>  
     <div class="sc-1ycdx8o-4 dqcgbV">
       <div class="sc-1ycdx8o-5 gHjUsa">
