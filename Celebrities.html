@@ -54,6 +54,28 @@
       color: white;
     }
 
+    @media only screen and (max-width: 600px) {
+  .desc {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .name {
+    margin-bottom: 10px; /* Add space below the name */
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .fol {
+    margin-top: 10px; /* Add space above the followers count */
+  }
+}
+
     div.gallery1:hover .icon {
       display: block; /* Show on hover */
     }
