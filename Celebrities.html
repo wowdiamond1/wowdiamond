@@ -2,255 +2,267 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-div.gallery1 {
-  border: 1px solid #ccc;
-  margin: 30px;
-  position: relative;
-}
+    div.gallery1 {
+      border: 1px solid #ccc;
+      margin: 30px;
+      position: relative;
+    }
 
-div.gallery1:hover {
-  border: 5px solid #4d1344;
-}
+    div.gallery1:hover {
+      border: 5px solid #4d1344;
+    }
 
-div.gallery1 img {
-  width: 100%;
-}
+    div.gallery1 img {
+      width: 100%;
+    }
 
-.desc {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: linear-gradient(to right, #1A004D, #F8ABEB);
-}
+    .desc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      background: linear-gradient(to right, #1A004D, #F8ABEB);
+    }
 
-.name {
-  margin: 0;
-  font-size: 20px;
-  color: white;
-}
+    .name {
+      margin: 0;
+      font-size: 20px;
+      color: white;
+    }
 
-.right-side {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
+    .right-side {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
 
-.icon {
-  width: 15px;
-  height: 15px;
-  float: right;
-}
+    .icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      display: none; /* Initially hidden */
+    }
 
-.fol {
-  margin: 0;
-  font-size: 20px;
-  color: white;
-}
+    .fol {
+      margin: 0;
+      font-size: 20px;
+      color: white;
+    }
 
-.responsive1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 0 6px;
-}
+    div.gallery1:hover .icon {
+      display: block; /* Show on hover */
+    }
 
-@media only screen and (max-width: 900px) {
-  .responsive1 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    .responsive1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 0 6px;
+    }
 
-@media only screen and (max-width: 600px) {
-  .responsive1 {
-    grid-template-columns: 1fr;
-  }
-}
+    @media only screen and (max-width: 900px) {
+      .responsive1 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-.heading {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: white;
-  font-size: 40px;
-  margin: 0;
-  text-align: center;
-  background: linear-gradient(to right, #4a288d, #F8ABEB);
-  padding: 20px;
-}
+    @media only screen and (max-width: 600px) {
+      .responsive1 {
+        grid-template-columns: 1fr;
+      }
+    }
 
+    .heading {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: white;
+      font-size: 40px;
+      margin: 0;
+      text-align: center;
+      background: linear-gradient(to right, #4a288d, #F8ABEB);
+      padding: 20px;
+    }
 
-/* navbar */
-.topnav {
-  overflow: hidden;
-  background-color: white;
-}
+    /* navbar */
+    .topnav {
+      overflow: hidden;
+      background-color: white;
+    }
 
-.topnav a {
-  float: right;
-  margin-left: 10px;
-  display: block;
-  color: #5f5656;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+    .topnav a {
+      float: right;
+      margin-left: 10px;
+      display: block;
+      color: #5f5656;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
 
-.topnav a.active {
-  background-color: white;
-  color: #000;
-}
+    .topnav a.active {
+      background-color: white;
+      color: #000;
+    }
 
-.topnav .icon {
-  display: none;
-  color: black;
-}
+    .topnav .icon {
+      display: none;
+      color: black;
+    }
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
 
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-.topnav img {
-  margin-left: 30px;
-}
-/* logo */
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+    .topnav img {
+      margin-left: 30px;
+    }
 
-.logo img {
-  height: 60px;
-  width: 60px;
-}
+    /* logo */
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-@media screen and (max-width: 600px) {
-  .logo {
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-  }
+    .logo img {
+      height: 60px;
+      width: 60px;
+    }
 
-  .logo img {
-    height: 50px;
-    width: 50px;
-    
-  }
-}
-</style>
+    @media screen and (max-width: 600px) {
+      .logo {
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+      }
+
+      .logo img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  </style>
 </head>
-<div class="topnav" id="myTopnav">
-  <img 
-  height="50px"
-  width="50px"
-  src="https://hosting.renderforestsites.com/24972182/1221072/media/d1d2993f1f0aa81dc786bf35f61c250c.png">
-<a href="/Contact">Get in touch</a>
-<a href="/#about">About</a>
-<a href="./Services#packages">Packages</a>
-<a href="/Celebrities">Celebrities</a>
-<a href="/Services">Services</a>
-<a href="./">Home</a>
-<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-  <i class="fa fa-bars"></i>
-</a>
-</div>
-<div class="heading">TOP CELEBRITIES OF WOW DIAMOND</div>
-
-
-
-<div class="responsive1">
+<body>
+  <div class="topnav" id="myTopnav">
+    <img 
+      height="50px"
+      width="50px"
+      src="https://hosting.renderforestsites.com/24972182/1221072/media/d1d2993f1f0aa81dc786bf35f61c250c.png">
+    <a href="/Contact">Get in touch</a>
+    <a href="/#about">About</a>
+    <a href="./Services#packages">Packages</a>
+    <a href="/Celebrities">Celebrities</a>
+    <a href="/Services">Services</a>
+    <a href="./">Home</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="heading">TOP CELEBRITIES OF WOW DIAMOND</div>
+  <div class="responsive1">
     <!-- card -->
-  <div class="gallery1">
-      <img src="https://admin.tellychakkar.com/sites/www.tellychakkar.com/files/s3fs-public/images/story/2023/01/09/rubina.jpg" alt="Northern Lights" width="600" height="400">
-    <div class="desc">
-      <div class="name">Rubina Dialik</div>
-      <div class="right-side">
-        <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-        <div class="fol">23k</div>
+    <div class="gallery1">
+      <img src="https://www.theindianwire.com/wp-content/uploads/2019/09/Rubina-Dilaik15-819x1024.jpg" alt="Rubina Dilaik" width="600" height="400">
+      <div class="desc">
+        <div class="name">Rubina Dilaik</div>
+        <div class="right-side">
+          <a href="https://www.instagram.com/rubinadilaik/?hl=en">
+            <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
+          </a>
+          <div class="fol">9.6M</div>
+        </div>
+      </div>
+    </div>    
+    <!-- card -->
+    <div class="gallery1">
+      <img src="https://thebiodiary.com/uploads/bio/shehnaz-gill-2.jpg" alt="Shehnaaz gill" width="600" height="400">
+      <div class="desc">
+        <div class="name">Shehnaaz gill</div>
+        <div class="right-side">
+          <a href="https://www.instagram.com/shehnaazgill/?hl=en">
+            <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
+          </a>
+          <div class="fol">18.3M</div>
+        </div>
       </div>
     </div>
-  </div>
     <!-- card -->
-  <div class="gallery1">
-      <img src="https://thebiodiary.com/uploads/bio/shehnaz-gill-2.jpg" alt="Northern Lights" width="600" height="400">
-    <div class="desc">
-      <div class="name">Shehnaaz gill      </div>
-      <div class="right-side">
-        <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-        <div class="fol">23k</div>
+    <div class="gallery1">
+      <img src="https://st1.bollywoodlife.com/wp-content/uploads/2024/03/FotoJet-65.jpg" alt="Shehzada Dhami" width="600" height="400">
+      <div class="desc">
+        <div class="name">Shehzada Dhami</div>
+        <div class="right-side">
+          <a href="https://www.instagram.com/the__shehzadaaa/?hl=en">
+            <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
+          </a>
+          <div class="fol">588k</div>
+        </div>
       </div>
     </div>
-  </div>
     <!-- card -->
-  <div class="gallery1">
-      <img src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt="Northern Lights" width="600" height="400">
-    <div class="desc">
-      <div class="name">Shehzada      </div>
-      <div class="right-side">
-        <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-        <div class="fol">23k</div>
+    <div class="gallery1">
+      <img src="https://images.news18.com/ibnlive/uploads/2024/03/untitled-design-35-2024-03-2f0113b9a09b3ea288a49a62534ba51a.png?impolicy=website&width=640&height=480" alt="Rakhi Sawant" width="600" height="400">
+      <div class="desc">
+        <div class="name">Rakhi Sawant</div>
+        <div class="right-side">
+          <a href="https://www.instagram.com/rakhisawant2511/?hl=en">
+            <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
+          </a>
+          <div class="fol">15.4M</div>
+        </div>
       </div>
     </div>
-  </div>
     <!-- card -->
-  <div class="gallery1">
-      <img src="https://cdn.siasat.com/wp-content/uploads/2021/05/rakhi.jpg" alt="Northern Lights" width="600" height="400">
-    <div class="desc">
-      <div class="name">Rakhi Sawant
-      </div>
-      <div class="right-side">
-        <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-        <div class="fol">23k</div>
+    <div class="gallery1">
+      <img src="https://img.indiaforums.com/person/480x360/1/1133-tejasswi-prakash.jpg?c=2lSB2C" alt="Tejasswi Prakash" width="600" height="400">
+      <div class="desc">
+        <div class="name">Tejasswi Prakash</div>
+        <div class="right-side">
+          <a href="https://www.instagram.com/tejasswiprakash/?hl=en">
+            <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
+          </a>
+          <div class="fol">7.5M</div>
+        </div>
       </div>
     </div>
-  </div>
     <!-- card -->
   <div class="gallery1">
-      <img src="https://img.indiaforums.com/person/480x360/1/1133-tejasswi-prakash.jpg?c=2lSB2C" alt="Northern Lights" width="600" height="400">
-    <div class="desc">
-      <div class="name">Tejasswi Prakash
-      </div>
-      <div class="right-side">
-        <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-        <div class="fol">23k</div>
-      </div>
-    </div>
-  </div>
-    <!-- card -->
-  <div class="gallery1">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Rashami_Desai_at_Lokmat_Most_Stylish_Awards_2022_%281%29_%28cropped%29.jpg" alt="Northern Lights" width="600" height="400">
-    <div class="desc">
+      <img src="https://w0.peakpx.com/wallpaper/93/689/HD-wallpaper-rashmi-desai-head-dress.jpg" alt="Northern Lights" width="600" height="400">
+    <div class="desc">  
       <div class="name">Rashmi desai
       </div>
       <div class="right-side">
-        <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
+        <a href="https://www.instagram.com/tejasswiprakash/?hl=en">
+          <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
+          </a>
         <div class="fol">23k</div>
       </div>
     </div>
@@ -261,67 +273,14 @@ div.gallery1 img {
 <div class="desc">
   <div class="name">Himanshi khurana</div>
   <div class="right-side">
-    <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-    <div class="fol">23k</div>
+    <a href="https://www.instagram.com/iamhimanshikhurana?igsh=ZzJwcnNsYXcyNTE4">
+      <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
+      </a>
+    <div class="fol">11.5M</div>
   </div>
 </div>
 </div>
-<!-- card -->
-<div class="gallery1">
-  <img src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt="Northern Lights" width="600" height="400">
-<div class="desc">
-  <div class="name">shivani</div>
-  <div class="right-side">
-    <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-    <div class="fol">23k</div>
-  </div>
-</div>
-</div>
-<!-- card -->
-<div class="gallery1">
-  <img src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt="Northern Lights" width="600" height="400">
-<div class="desc">
-  <div class="name">shivani</div>
-  <div class="right-side">
-    <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-    <div class="fol">23k</div>
-  </div>
-</div>
-</div>
-<!-- card -->
-<div class="gallery1">
-  <img src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt="Northern Lights" width="600" height="400">
-<div class="desc">
-  <div class="name">shivani</div>
-  <div class="right-side">
-    <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-    <div class="fol">23k</div>
-  </div>
-</div>
-</div>
-<!-- card -->
-<div class="gallery1">
-  <img src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt="Northern Lights" width="600" height="400">
-<div class="desc">
-  <div class="name">shivani</div>
-  <div class="right-side">
-    <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-    <div class="fol">23k</div>
-  </div>
-</div>
-</div>
-<!-- card -->
-<div class="gallery1">
-  <img src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg" alt="Northern Lights" width="600" height="400">
-<div class="desc">
-  <div class="name">shivani</div>
-  <div class="right-side">
-    <img src="/Assets/f-icon.png" alt="icon" class="icon" style="height: 25px; width: 25px; margin-right: 10px;">
-    <div class="fol">23k</div>
-  </div>
-</div>
-</div>
-</div>
+
 
 <script>
   function myFunction() {
