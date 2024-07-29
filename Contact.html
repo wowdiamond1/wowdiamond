@@ -229,24 +229,19 @@
                       <!-- <div type="noheader" class="WM_GLOBAL_secondary-font header-nav-bar sc-et7lxk-1 ehtzge"> 
                         -->
                         <div class="topnav" id="myTopnav">
-                    
-                          <img 
-                          height="50px"
-                          width="50px"
-                          src="https://hosting.renderforestsites.com/24972182/1221072/media/d1d2993f1f0aa81dc786bf35f61c250c.png">
-
-                          <a href="Contact.html">Get in touch</a>
-                          <a href="Services.html#packages">Packages</a>
-                          <a href="Celebrities.html">Celebrities</a>
-                          <a href="/#comp-18d3628d8ae">About</a>
-                          <a href="Services.html">Services</a>
-                        <a href="index.html">Home</a>
-                        
-                        
-                        
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                          <i class="fa fa-bars"></i>
-                        </a>
+                        <img 
+                        height="50px"
+                        width="50px"
+                        src="https://hosting.renderforestsites.com/24972182/1221072/media/d1d2993f1f0aa81dc786bf35f61c250c.png">
+                        <a href="Contact.html" onclick="rewriteURL(event)">Get in touch</a>
+                      <a href="/#comp-18d3628d8ae">About</a>
+                      <a href="Services.html#packages">Packages</a>
+                      <a href="Celebrities.html">Celebrities</a>
+                      <a href="Services.html">Services</a>
+                      <a href="index.html">Home</a>
+                      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a>
                       </div>
                         <div class="porjectLinksDesktop sc-1akbv98-2 bxeGYB">
                          
@@ -335,6 +330,14 @@
           x.className = "topnav";
         }
       }
+      </script>
+      <script>
+        function rewriteURL(event) {
+          event.preventDefault(); // Prevent the default anchor behavior
+          const newUrl = '/contact'; // The new URL you want to display
+          window.history.pushState({}, '', newUrl); // Update the URL without reloading the page
+          // Optionally, load the Contact.html content dynamically here
+        }
       </script>
   </body>
 </html>

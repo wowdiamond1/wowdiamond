@@ -3,6 +3,7 @@
   <head>
     <title></title>
     <meta charset="UTF-8" >
+   
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <meta id="meta-keywords" name="keywords" content="" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,8 +16,7 @@
 /* sc-component-id: sc-13kgj0f-0 */
 .imHWAS {
   height: 100%; width: 100%; overflow: hidden; margin-bottom: 50px; margin-left: -40px;}  
-
-
+ 
 /* sc-component-id: sc-1vrgkll-0 */
 .ivoOXx{position:fixed;z-index:19;right:20px;top:auto;bottom:0;-webkit-transform:none;-ms-transform:none;transform:none;margin-bottom:20px;}
 /* sc-component-id: sc-1vrgkll-1 */
@@ -800,10 +800,8 @@ margin-top: 0px;
                         width="50px"
                         src="https://hosting.renderforestsites.com/24972182/1221072/media/d1d2993f1f0aa81dc786bf35f61c250c.png">
                       
-                    
-                      
 
-                      <a href="Contact.html">Get in touch</a>
+                        <a href="Contact.html" onclick="rewriteURL(event)">Get in touch</a>
                       <a href="/#comp-18d3628d8ae">About</a>
                       <a href="Services.html#packages">Packages</a>
                       <a href="Celebrities.html">Celebrities</a>
@@ -1082,9 +1080,7 @@ margin-top: 0px;
                                 <div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true"></div></div></div>
                                 <!-- <div style="display:block" class="slick-arrow slick-next">
                                   <button class="sc-1b18jt4-0 eZKSRg"></button></div> -->
-  
-                                  
-                                  <div class="slideshow-container">
+         <div class="slideshow-container">
                                     <div class="mySlides fade card">
                                         <img height="150px" width="150px" src="https://t4.ftcdn.net/jpg/01/98/68/53/360_F_198685380_UiiR2lCHgg7raR054Dv9v5cuOYdLCEdX.jpg" alt="SARAH SMITH">
                                         <h1 class="name-sec">SARAH SMITH</h1>
@@ -1115,10 +1111,9 @@ margin-top: 0px;
                                     <span class="dot" onclick="currentSlide(1)"></span>
                                     <span class="dot" onclick="currentSlide(2)"></span>
                                     <span class="dot" onclick="currentSlide(3)"></span>
-                                </div>
-                            
-                                
-                      
+                                </div> 
+                           
+
                                 <!-- <ul style="display:block" class="slick-dots"> -->
                                   <!-- <li class="slick-active"><button>1</button>
                                   </li><li class=""><button>2</button></li>
@@ -1166,7 +1161,15 @@ margin-top: 0px;
           // Implement AJAX or fetch logic here to load new content dynamically
         }
       </script>
-      
+      <script>
+          jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+      </script>
+    
       <script>
       let slideIndex = 1;
   showSlides(slideIndex);
@@ -1207,6 +1210,7 @@ margin-top: 0px;
     }
   }
   </script>
+  
   
       <script src="./bundle-lyk0ka1q.js"></script>
     </body>
