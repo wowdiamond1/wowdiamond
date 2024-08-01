@@ -296,10 +296,18 @@ background:linear-gradient(-180deg,#FFFFFF 0%,#F6F0FF 96%);box-shadow:0 2px 6px 
   margin-right: 0px; /* Remove margin from the last column */
 }
 
-.btn-s1{
-  margin-top: -40px !important;
-  margin-left: 50px !important;
+.btn-s1 {
+  margin-top: -10px !important;
+  margin-left: 180px !important;
 }
+
+/* Media query for screen sizes 768px or less */
+@media screen and (max-width: 768px) {
+  .btn-s1 {
+    margin-left: 150px !important;
+  }
+}
+
 /* points-section */
 .points {
   list-style-type: none; /* Remove default list styling */
@@ -1045,11 +1053,10 @@ background:linear-gradient(-180deg,#FFFFFF 0%,#F6F0FF 96%);box-shadow:0 2px 6px 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 280px;
+  margin-left: 250px;
   width: 100%; /* Ensure the container takes the full width */
   margin-top: -140px; /* Reduced top margin */
 }
-
 
 .eewXnn0 .link {
   border-radius: 10px;
@@ -1098,6 +1105,13 @@ background:linear-gradient(-180deg,#FFFFFF 0%,#F6F0FF 96%);box-shadow:0 2px 6px 
     padding: 0 20px; /* Adjust padding for smaller screens */
   }
 }
+
+@media screen and (min-width: 601px) {
+  .eewXnn0 {
+    margin-left: 150px; /* Reset margin for larger screens */
+  }
+}
+
 
 /* .sc-args7x-6 {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
